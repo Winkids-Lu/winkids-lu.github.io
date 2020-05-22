@@ -156,7 +156,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/05/22/Hexo-Next%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/05/22/Hexo02/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -170,7 +170,66 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2020/05/22/Hexo-Next%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96/" class="post-title-link" itemprop="url">Hexo-Next主题美化</a>
+            <a href="/2020/05/22/Hexo02/" class="post-title-link" itemprop="url">Hexo博客使用 (二)：Hexo基本使用与图床</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-05-22 19:20:40 / 修改时间：19:21:33" itemprop="dateCreated datePublished" datetime="2020-05-22T19:20:40+08:00">2020-05-22</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="创建页面"><a href="#创建页面" class="headerlink" title="创建页面"></a>创建页面</h2><h2 id="博客图床方案"><a href="#博客图床方案" class="headerlink" title="博客图床方案"></a>博客图床方案</h2><p><a href="https://www.bilibili.com/video/BV1f4411z73J?from=search&amp;seid=16559740816327465749" target="_blank" rel="noopener">https://www.bilibili.com/video/BV1f4411z73J?from=search&amp;seid=16559740816327465749</a></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/05/22/Hexo01/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Winkids">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Utopia">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/05/22/Hexo01/" class="post-title-link" itemprop="url">Hexo-Next主题美化</a>
         </h2>
 
         <div class="post-meta">
@@ -227,7 +286,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2020/05/22/Hexo%E9%85%8D%E7%BD%AE/" class="post-title-link" itemprop="url">Hexo初步使用配置过程</a>
+            <a href="/2020/05/22/Hexo%E9%85%8D%E7%BD%AE/" class="post-title-link" itemprop="url">Hexo博客使用 (一)：基于Hexo-Github的个人博客框架</a>
         </h2>
 
         <div class="post-meta">
@@ -238,7 +297,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2020-05-22 16:24:28 / 修改时间：19:04:37" itemprop="dateCreated datePublished" datetime="2020-05-22T16:24:28+08:00">2020-05-22</time>
+              <time title="创建时间：2020-05-22 16:24:28 / 修改时间：19:19:59" itemprop="dateCreated datePublished" datetime="2020-05-22T16:24:28+08:00">2020-05-22</time>
             </span>
 
           
@@ -255,6 +314,7 @@
           <blockquote>
 <p>参考：<a href="https://www.bilibili.com/video/BV1Yb411a7ty?from=search&amp;seid=10467841374186798749" target="_blank" rel="noopener">https://www.bilibili.com/video/BV1Yb411a7ty?from=search&amp;seid=10467841374186798749</a></p>
 </blockquote>
+<p>本文为Hexo搭建博客记录一，内容为本地搭建博客，配置远端github信息。</p>
 <ul>
 <li>主题：Hexo-Next6</li>
 <li>需要npm，git，nodejs（windows平台cmder自动集成所有工具，故使用cmder就可以）</li>
@@ -264,6 +324,18 @@
 
 
 <p>基本思路：本地生成静态网页，部署到远端仓库（github或者gitee），其中github上传后自动部署，但是访问速度慢；gitee自动部署功能收费。本教程基于github远端仓库配置。</p>
+<h2 id="Step0：在github为本机配置ssh信息"><a href="#Step0：在github为本机配置ssh信息" class="headerlink" title="Step0：在github为本机配置ssh信息"></a>Step0：在github为本机配置ssh信息</h2><p>安装好git后有两个地方需要配置：</p>
+<ul>
+<li>个人信息，包括user.name和user.email</li>
+<li>ssh秘钥信息，使此台电脑与你的远端仓库相连接</li>
+</ul>
+<p>配置个人信息：使用cmder或者使用git bash here</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name <span class="string">"Your Name"</span></span><br><span class="line">git config --global user.email <span class="string">"email@example.com"</span></span><br></pre></td></tr></table></figure>
+
+<p>配置秘钥信息</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa  -C <span class="string">"yourEmailAddress"</span>   <span class="comment"># 一路回车</span></span><br><span class="line"><span class="built_in">cd</span> ~/.ssh  <span class="comment"># 或者直接打开C盘/用户/.ssh文件夹，复制id_rsa.pub</span></span><br></pre></td></tr></table></figure>
+
+<p>注意要复制公钥文件，然后打开g自己的github，按照路径自己头像 &gt;&gt; settings &gt;&gt; SSH and GPG keys &gt;&gt;New SSH key，将pub文件上传，即完成秘钥配对</p>
 <h2 id="Step1：全局安装hexo"><a href="#Step1：全局安装hexo" class="headerlink" title="Step1：全局安装hexo"></a>Step1：全局安装hexo</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli  <span class="comment"># 或者cnpm install -g hexo-cli</span></span><br></pre></td></tr></table></figure>
 
 <h2 id="Step2：创建需要保存博客的文件夹，然后进入文件夹-以文件夹名blog为例"><a href="#Step2：创建需要保存博客的文件夹，然后进入文件夹-以文件夹名blog为例" class="headerlink" title="Step2：创建需要保存博客的文件夹，然后进入文件夹(以文件夹名blog为例)"></a>Step2：创建需要保存博客的文件夹，然后进入文件夹(以文件夹名blog为例)</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 切换工作目录</span></span><br><span class="line"><span class="built_in">cd</span> blog</span><br><span class="line"><span class="comment"># 初始化hexo</span></span><br><span class="line">hexo init</span><br></pre></td></tr></table></figure>
@@ -284,9 +356,13 @@
 <h2 id="Step6：设置站点配置文件"><a href="#Step6：设置站点配置文件" class="headerlink" title="Step6：设置站点配置文件"></a>Step6：设置站点配置文件</h2><p>打开blog文件夹下的_config.yml文件，设置最后几行远端推送的信息</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 注意冒号后面的空格不可以省略</span></span><br><span class="line">deploy:</span><br><span class="line"> 	<span class="built_in">type</span>: git</span><br><span class="line"> 	repo: https://github.com/Winkids-Lu/winkids-lu.github.io.git</span><br><span class="line"> 	branch: master</span><br></pre></td></tr></table></figure>
 
+<h2 id="Step7：提交"><a href="#Step7：提交" class="headerlink" title="Step7：提交"></a>Step7：提交</h2><p>生成后输入命令提交</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
 
-
-<h2 id="创建页面"><a href="#创建页面" class="headerlink" title="创建页面"></a>创建页面</h2><h2 id="博客图床方案"><a href="#博客图床方案" class="headerlink" title="博客图床方案"></a>博客图床方案</h2><p><a href="https://www.bilibili.com/video/BV1f4411z73J?from=search&amp;seid=16559740816327465749" target="_blank" rel="noopener">https://www.bilibili.com/video/BV1f4411z73J?from=search&amp;seid=16559740816327465749</a></p>
+<p>出现下面的情况，需要输入你的github用户名和密码，之后成功提交</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Winkids-Lu/images/img/hexo/hexo_d.jpg" alt="hexo提交"></p>
+<p>注意，如果报错<strong>please tell me who you are</strong>，证明是为配置git信息，需要告诉git个人信息</p>
+<h2 id="Step8：打开浏览器输入yourname-github-io，正常访问，配置结束"><a href="#Step8：打开浏览器输入yourname-github-io，正常访问，配置结束" class="headerlink" title="Step8：打开浏览器输入yourname.github.io，正常访问，配置结束"></a>Step8：打开浏览器输入yourname.github.io，正常访问，配置结束</h2><h2 id="创建页面"><a href="#创建页面" class="headerlink" title="创建页面"></a>创建页面</h2><h2 id="博客图床方案"><a href="#博客图床方案" class="headerlink" title="博客图床方案"></a>博客图床方案</h2><p><a href="https://www.bilibili.com/video/BV1f4411z73J?from=search&amp;seid=16559740816327465749" target="_blank" rel="noopener">https://www.bilibili.com/video/BV1f4411z73J?from=search&amp;seid=16559740816327465749</a></p>
 
       
     </div>
@@ -602,7 +678,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">5</span>
+          <span class="site-state-item-count">6</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
