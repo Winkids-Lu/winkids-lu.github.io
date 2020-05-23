@@ -246,10 +246,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2020-05-22 19:20:40 / 修改时间：20:14:21" itemprop="dateCreated datePublished" datetime="2020-05-22T19:20:40+08:00">2020-05-22</time>
+              <time title="创建时间：2020-05-22 19:20:40" itemprop="dateCreated datePublished" datetime="2020-05-22T19:20:40+08:00">2020-05-22</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-05-23 09:39:49" itemprop="dateModified" datetime="2020-05-23T09:39:49+08:00">2020-05-23</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -297,7 +303,32 @@
 <li>关注主题配置文件中的menu结构</li>
 </ul>
 </blockquote>
-<h2 id="2-博客图床方案"><a href="#2-博客图床方案" class="headerlink" title="2. 博客图床方案"></a>2. 博客图床方案</h2><p><a href="https://www.bilibili.com/video/BV1f4411z73J?from=search&amp;seid=16559740816327465749" target="_blank" rel="noopener">https://www.bilibili.com/video/BV1f4411z73J?from=search&amp;seid=16559740816327465749</a></p>
+<h2 id="2-博客图床方案"><a href="#2-博客图床方案" class="headerlink" title="2. 博客图床方案"></a>2. 博客图床方案</h2><p>使用本地上传到github部署的图片会拖慢网页加载的速度，这里使用Github+PicGo+JSD的图床解决方案。图片通过picgo上传到github自建仓库，并生成外链接用于在markdown文件中通过链接引用图片。</p>
+<h3 id="步骤："><a href="#步骤：" class="headerlink" title="步骤："></a>步骤：</h3><ul>
+<li><p>在github上创建仓库，仓库命名随意，<strong>必须设置为public</strong></p>
+</li>
+<li><p>建立token，github我的头像 ==&gt; Settings ==&gt; Developer Settings ==&gt; Personal access tokens ==&gt; generate new tokens。简介随意，必须repo内的全部选项，注意<strong>token内容创建只显示一次</strong></p>
+</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/Winkids-Lu/images/img/hexo/github_token.jpg" alt="github_token"></p>
+<ul>
+<li>下载PicGo并配置<ul>
+<li>仓库名格式：github用户名/仓库名</li>
+<li>分支名：默认master</li>
+<li>设定token：复制刚才生成的token码</li>
+<li>指定存储路径：可以不填，比如填写img/，就会在仓库中自动生成一个同名文件夹</li>
+<li>自定义域名：使用JDK加速链接，格式<strong><a href="https://cdn.jsdelivr.net/gh/用户名/仓库名/子集文件夹(可选)" target="_blank" rel="noopener">https://cdn.jsdelivr.net/gh/用户名/仓库名/子集文件夹(可选)</a></strong></li>
+</ul>
+</li>
+<li>文件上传成功后在相册中可以获取到上传图片的外链接，直接在markdown中引用即可</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/Winkids-Lu/images/img/hexo/picgo.jpg" alt="picgo_settings"></p>
+<blockquote>
+<ul>
+<li>图片命名有’+’会导致上传失败</li>
+<li>如遇到服务连接失败请百度解决方案</li>
+</ul>
+</blockquote>
 
       
     </div>
