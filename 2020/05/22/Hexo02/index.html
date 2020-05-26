@@ -19,7 +19,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://winkidsimage.oss-cn-beijing.aliyuncs.com/thumbnail/hexologo.jpg">
 <meta property="article:published_time" content="2020-05-22T11:20:40.000Z">
-<meta property="article:modified_time" content="2020-05-26T09:18:19.870Z">
+<meta property="article:modified_time" content="2020-05-26T10:02:58.025Z">
 <meta property="article:author" content="Winkids">
 <meta property="article:tag" content="Hexo">
 <meta property="article:tag" content="Blog">
@@ -147,7 +147,7 @@
             <div class="level-left">
                 <time class="level-item has-text-grey" datetime="2020-05-22T11:20:40.000Z"><i class="far fa-calendar-alt">&nbsp;</i>2020-05-22</time>
                 
-                <time class="level-item has-text-grey is-hidden-mobile" datetime="2020-05-26T09:18:19.870Z"><i class="far fa-calendar-check">&nbsp;</i>2020-05-26</time>
+                <time class="level-item has-text-grey is-hidden-mobile" datetime="2020-05-26T10:02:58.025Z"><i class="far fa-calendar-check">&nbsp;</i>2020-05-26</time>
                 
                 
                 <div class="level-item">
@@ -160,7 +160,7 @@
                     <i class="far fa-clock"></i>&nbsp;
                     
                     
-                    8 分钟 读完 (大约 1167 个字)
+                    8 分钟 读完 (大约 1171 个字)
                 </span>
                 
                 
@@ -191,6 +191,7 @@
 
 <h4 id="归档页"><a href="#归档页" class="headerlink" title="归档页"></a>归档页</h4><p>与上述操作类似</p>
 <h4 id="关于页"><a href="#关于页" class="headerlink" title="关于页"></a>关于页</h4><p>创建后在index可以自定义显示内容</p>
+<p>&nbsp;</p>
 <h3 id="页面使用"><a href="#页面使用" class="headerlink" title="页面使用"></a>页面使用</h3><p>（标签页tags与分类页categories）</p>
 <p>在文章抬头，键入分类信息：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">title: Hexo博客使用 (二)：Hexo基本使用与图床</span><br><span class="line">date: 2020-05-22 19:20:40</span><br><span class="line">tags: </span><br><span class="line">- Hexo</span><br><span class="line">- Blog     <span class="comment"># 输入需要分类的标签，之后所输入内容会在tags页面归类显示， 多个标签显示方法</span></span><br><span class="line"></span><br><span class="line">categories: </span><br><span class="line">- Hexo   <span class="comment"># 输入文章分类，之后文章会归类在categories页面显示</span></span><br></pre></td></tr></table></figure>
@@ -205,6 +206,7 @@
 <li>当修改配置文件支持mathjax后，需要在开头注明mathjax: true</li>
 </ul>
 </blockquote>
+<p>&nbsp;</p>
 <h2 id="博客图床方案"><a href="#博客图床方案" class="headerlink" title="博客图床方案"></a>博客图床方案</h2><blockquote>
 <p>参考 <a href="https://www.bilibili.com/video/BV1f4411z73J?from=search&amp;seid=16559740816327465749">https://www.bilibili.com/video/BV1f4411z73J?from=search&amp;seid=16559740816327465749</a></p>
 </blockquote>
@@ -215,6 +217,7 @@
 <li>阿里云OOS：购买OOS对象存储（9元/年），后期按照上传流量计费</li>
 </ul>
 <p>下文涉及两种图片解决方案，目前在使用的是<strong>阿里云OOS+PicGo</strong></p>
+<p>&nbsp;</p>
 <h3 id="Github-picgo方案"><a href="#Github-picgo方案" class="headerlink" title="Github+picgo方案"></a>Github+picgo方案</h3><p>使用本地上传到github部署的图片会拖慢网页加载的速度，这里使用Github+PicGo+JSD的图床解决方案。图片通过picgo上传到github自建仓库，并生成外链接用于在markdown文件中通过链接引用图片。</p>
 <h3 id="步骤："><a href="#步骤：" class="headerlink" title="步骤："></a>步骤：</h3><ul>
 <li><p>在github上创建仓库，仓库命名随意，<strong>必须设置为public</strong></p>
@@ -241,6 +244,7 @@
 <li>如遇到服务连接失败请百度解决方案</li>
 </ul>
 </blockquote>
+<p>&nbsp;</p>
 <h2 id="阿里云OOS-picgo方案"><a href="#阿里云OOS-picgo方案" class="headerlink" title="阿里云OOS+picgo方案"></a>阿里云OOS+picgo方案</h2><ul>
 <li>购买阿里云OOS存储服务</li>
 <li>新建bucket，设置权限为<strong>公开读</strong></li>
