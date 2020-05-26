@@ -19,7 +19,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://winkidsimage.oss-cn-beijing.aliyuncs.com/thumbnail/hexologo.jpg">
 <meta property="article:published_time" content="2020-05-22T08:24:28.000Z">
-<meta property="article:modified_time" content="2020-05-26T08:55:20.573Z">
+<meta property="article:modified_time" content="2020-05-26T09:14:33.159Z">
 <meta property="article:author" content="Winkids">
 <meta property="article:tag" content="Hexo">
 <meta property="article:tag" content="Blog">
@@ -32,7 +32,7 @@
 
 
 
-<link rel="icon" href="/images/favicon.svg">
+<link rel="icon" href="https://winkidsimage.oss-cn-beijing.aliyuncs.com/Blog_info/avatar.jpg">
 
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.7.2/css/bulma.css">
@@ -147,7 +147,7 @@
             <div class="level-left">
                 <time class="level-item has-text-grey" datetime="2020-05-22T08:24:28.000Z"><i class="far fa-calendar-alt">&nbsp;</i>2020-05-22</time>
                 
-                <time class="level-item has-text-grey is-hidden-mobile" datetime="2020-05-26T08:55:20.573Z"><i class="far fa-calendar-check">&nbsp;</i>2020-05-26</time>
+                <time class="level-item has-text-grey is-hidden-mobile" datetime="2020-05-26T09:14:33.159Z"><i class="far fa-calendar-check">&nbsp;</i>2020-05-26</time>
                 
                 
                 <div class="level-item">
@@ -160,7 +160,7 @@
                     <i class="far fa-clock"></i>&nbsp;
                     
                     
-                    6 分钟 读完 (大约 970 个字)
+                    7 分钟 读完 (大约 1049 个字)
                 </span>
                 
                 
@@ -207,7 +207,7 @@
 <h2 id="创建需要保存博客的文件夹，然后进入文件夹-以文件夹名blog为例"><a href="#创建需要保存博客的文件夹，然后进入文件夹-以文件夹名blog为例" class="headerlink" title="创建需要保存博客的文件夹，然后进入文件夹(以文件夹名blog为例)"></a>创建需要保存博客的文件夹，然后进入文件夹(以文件夹名blog为例)</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 切换工作目录</span></span><br><span class="line"><span class="built_in">cd</span> blog</span><br><span class="line"><span class="comment"># 初始化hexo</span></span><br><span class="line">hexo init</span><br></pre></td></tr></table></figure>
 
 <p>经过初始化后的文件夹结构如下图所示</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Winkids-Lu/images/img/hexo/hexo_init.jpg" alt="hexo_init文件结构"></p>
+<p><img src="https://winkidsimage.oss-cn-beijing.aliyuncs.com/Hexo/hexo_init.jpg" alt="Hexo init 文件结构"></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">-- <span class="built_in">source</span></span><br><span class="line">	| -- _post : 存放博客文件</span><br><span class="line">- - themes : 存放主题文件</span><br><span class="line">-- _config.yml: 站点配置文件</span><br><span class="line">-- package.json: 已安装插件列表</span><br></pre></td></tr></table></figure>
 
 
@@ -216,10 +216,7 @@
 
 <p>登陆localhost端口正常显示，至此本地环境配置完成，下一步需要配置github远端</p>
 <h2 id="配置远端github部署仓库"><a href="#配置远端github部署仓库" class="headerlink" title="配置远端github部署仓库"></a>配置远端github部署仓库</h2><p>注意仓库名必须和用户名相同：<strong>用户名.github.io</strong>，填写相关信息后创建仓库</p>
-<img src="https://cdn.jsdelivr.net/gh/Winkids-Lu/images/img/hexo/github_blog.jpg" alt="hexo仓库" style="zoom:80%;" />
-
-
-
+<p><img src="https://winkidsimage.oss-cn-beijing.aliyuncs.com/Hexo/github_blog.jpg" alt="git page"></p>
 <h2 id="在博客目录下安装hexo-git推送工具"><a href="#在博客目录下安装hexo-git推送工具" class="headerlink" title="在博客目录下安装hexo git推送工具"></a>在博客目录下安装hexo git推送工具</h2><p>warning信息可以忽略</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> blog</span><br><span class="line">npm install --save hexo-deployer-git   <span class="comment"># 或者cnpm安装</span></span><br></pre></td></tr></table></figure>
 
@@ -234,7 +231,7 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
 
 <p>出现下面的情况，需要输入你的github用户名和密码，之后成功提交</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Winkids-Lu/images/img/hexo/hexo_d.jpg" alt="hexo提交"></p>
+<p><img src="https://winkidsimage.oss-cn-beijing.aliyuncs.com/Hexo/hexo_d.jpg" alt="Hexo提交"></p>
 <p>注意，如果报错<strong>please tell me who you are</strong>，证明是为配置git信息，需要告诉git个人信息</p>
 <h2 id="打开浏览器输入yourname-github-io，正常访问，配置结束"><a href="#打开浏览器输入yourname-github-io，正常访问，配置结束" class="headerlink" title="打开浏览器输入yourname.github.io，正常访问，配置结束"></a>打开浏览器输入yourname.github.io，正常访问，配置结束</h2><p><strong>P.S.</strong></p>
 <ul>
@@ -242,6 +239,10 @@
 <li>避免每次提交都要输入用户名和密码的相关操作，请自行百度</li>
 </ul>
 <h2 id="绑定自定义的域名"><a href="#绑定自定义的域名" class="headerlink" title="绑定自定义的域名"></a>绑定自定义的域名</h2><p>以我的.top后缀域名为例，首先注册域名并通过实名认证，然后进行域名解析。通过阿里云新手引导会<strong>自动添加@和www两条记录</strong>，由于github page是虚拟服务器，需要将这两条引导类型更改为<strong>CNAME</strong></p>
+<p><img src="https://winkidsimage.oss-cn-beijing.aliyuncs.com/Hexo/dns.jpg" alt="DNS解析"></p>
+<p>然后回到Gitpage，路径为<strong>博客仓库页面——Settings下拉</strong></p>
+<p><img src="https://winkidsimage.oss-cn-beijing.aliyuncs.com/Hexo/gitpage.jpg" alt="Git page修改"></p>
+<p><strong>注意：个人域名只有经过了实名认证才能够正常使用</strong></p>
 
         </div>
         
@@ -288,7 +289,7 @@
         <i class="fab fa-weixin"></i>
     </span>
     <span>微信</span>
-    <div class="qrcode"><img src="https://cdn.jsdelivr.net/gh/Winkids-Lu/images/img/hexo/wechatpay.jpg" alt="微信"></div>
+    <div class="qrcode"><img src="https://winkidsimage.oss-cn-beijing.aliyuncs.com/Blog_info/wechatpay.jpg" alt="微信"></div>
 </a>
 
                 
