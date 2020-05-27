@@ -7,24 +7,23 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-<title>Linux（二）：Linux Tutorial - Utopia</title>
+<title>Imbalanced Classification (六)：Metrics - Utopia</title>
 
 
-    <meta name="description" content="本文为Linux系统以及Linux常用的指令自学笔记 视频教程：狂神说-Linux入门教程">
+    <meta name="description" content="指标">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Linux（二）：Linux Tutorial">
-<meta property="og:url" content="https://winkidslu.top/2020/05/25/Linux-bash/index.html">
+<meta property="og:title" content="Imbalanced Classification (六)：Metrics">
+<meta property="og:url" content="https://winkidslu.top/2020/05/27/ic-metrics/index.html">
 <meta property="og:site_name" content="Utopia">
-<meta property="og:description" content="本文为Linux系统以及Linux常用的指令自学笔记 视频教程：狂神说-Linux入门教程">
+<meta property="og:description" content="指标">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://winkidsimage.oss-cn-beijing.aliyuncs.com/thumbnail/linux.jpg">
-<meta property="article:published_time" content="2020-05-25T12:00:52.000Z">
-<meta property="article:modified_time" content="2020-05-26T16:23:35.695Z">
+<meta property="og:image" content="https://winkidsimage.oss-cn-beijing.aliyuncs.com/thumbnail/metrics.jpg">
+<meta property="article:published_time" content="2020-05-27T01:54:18.000Z">
+<meta property="article:modified_time" content="2020-05-27T02:32:14.328Z">
 <meta property="article:author" content="Winkids">
-<meta property="article:tag" content="Linux">
-<meta property="article:tag" content="工具">
+<meta property="article:tag" content="Imbalanced Classification">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://winkidsimage.oss-cn-beijing.aliyuncs.com/thumbnail/linux.jpg">
+<meta name="twitter:image" content="https://winkidsimage.oss-cn-beijing.aliyuncs.com/thumbnail/metrics.jpg">
 
 
 
@@ -82,7 +81,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo.svg" alt="Linux（二）：Linux Tutorial" height="28">
+                <img src="/images/logo.svg" alt="Imbalanced Classification (六)：Metrics" height="28">
             
             </a>
         </div>
@@ -132,27 +131,27 @@
     
     <div class="card-image">
         <span  class="image is-7by1">
-            <img class="thumbnail" src="https://winkidsimage.oss-cn-beijing.aliyuncs.com/thumbnail/linux.jpg" alt="Linux（二）：Linux Tutorial">
+            <img class="thumbnail" src="https://winkidsimage.oss-cn-beijing.aliyuncs.com/thumbnail/metrics.jpg" alt="Imbalanced Classification (六)：Metrics">
         </span>
     </div>
     
     <div class="card-content article ">
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <i class="fas fa-angle-double-right"></i>Linux（二）：Linux Tutorial
+                <i class="fas fa-angle-double-right"></i>Imbalanced Classification (六)：Metrics
             
         </h1>
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2020-05-25T12:00:52.000Z"><i class="far fa-calendar-alt">&nbsp;</i>2020-05-25</time>
+                <time class="level-item has-text-grey" datetime="2020-05-27T01:54:18.000Z"><i class="far fa-calendar-alt">&nbsp;</i>2020-05-27</time>
                 
-                <time class="level-item has-text-grey is-hidden-mobile" datetime="2020-05-26T16:23:35.695Z"><i class="far fa-calendar-check">&nbsp;</i>2020-05-27</time>
+                <time class="level-item has-text-grey is-hidden-mobile" datetime="2020-05-27T02:32:14.328Z"><i class="far fa-calendar-check">&nbsp;</i>2020-05-27</time>
                 
                 
                 <div class="level-item">
                 <i class="far fa-folder-open has-text-grey"></i>&nbsp;
-                <a class="has-link-grey -link" href="/categories/Linux/">Linux</a>
+                <a class="has-link-grey -link" href="/categories/Imbalanced-Classfifcation/">Imbalanced Classfifcation</a>
                 </div>
                 
                 
@@ -160,7 +159,7 @@
                     <i class="far fa-clock"></i>&nbsp;
                     
                     
-                    6 分钟 读完 (大约 917 个字)
+                    几秒 读完 (大约 2 个字)
                 </span>
                 
                 
@@ -173,87 +172,15 @@
         </div>
         
         <div class="content">
-            <p>本文为Linux系统以及Linux常用的指令自学笔记</p>
-<p>视频教程：<a href="https://www.bilibili.com/video/BV187411y7hF?p=5">狂神说-Linux入门教程</a></p>
-<a id="more"></a>
-
-<h2 id="初识Linux系统"><a href="#初识Linux系统" class="headerlink" title="初识Linux系统"></a>初识Linux系统</h2><h3 id="开机与关机"><a href="#开机与关机" class="headerlink" title="开机与关机"></a>开机与关机</h3><ul>
-<li><p>开机启动的程序，在Windows中叫做<strong>服务(Server)</strong>，在Linux系统中叫做<strong>守护进程(daemon)</strong></p>
-</li>
-<li><p>三种用户登录的方式：</p>
-<ul>
-<li>命令行登录：输入用户名与密码</li>
-<li>远程登录：云服务器ssh (Xshell)</li>
-<li>图形界面登录：Ubuntu</li>
-</ul>
-</li>
-<li><p>最高权限账户为root账户</p>
-</li>
-<li><p>Linux中没有输出结果即代表输入的命令成功</p>
-</li>
-<li><p>服务器用在Linux上基本不用到关机命令。在服务器中如果要关机需要先进行数据同步</p>
-</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 数据同步到硬盘</span></span><br><span class="line">sync</span><br><span class="line"><span class="comment"># 关机</span></span><br><span class="line">shutdown</span><br><span class="line"><span class="comment"># 重启系统（不建议云服务器重启）</span></span><br><span class="line">reboot</span><br></pre></td></tr></table></figure>
-
-<p>&nbsp;</p>
-<h3 id="系统的目录结构"><a href="#系统的目录结构" class="headerlink" title="系统的目录结构"></a>系统的目录结构</h3><blockquote>
-<ul>
-<li>一切皆文件</li>
-<li>根目录/，所有的文件都挂载在这个节点下</li>
-</ul>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 显示当前文件夹目录下的所有文件，在云服务器中一般显示的是用户文件夹下的内容</span></span><br><span class="line">ls</span><br><span class="line"><span class="comment"># 显示根目录下的文件</span></span><br><span class="line">ls /</span><br></pre></td></tr></table></figure>
-
-<p>Linux系统的目录结构：</p>
-<p><img src="https://winkidsimage.oss-cn-beijing.aliyuncs.com/Linux/linux_menu.jpg" alt=""></p>
-<ul>
-<li><strong>/bin</strong>：Binary的缩写，存放常用的Linux命令（勿动）</li>
-<li><strong>/boot</strong>：Linux启动的核心文件，包括一些连接文件以及镜像文件（勿动）</li>
-<li><strong>/dev</strong>：Device设备的缩写，存放系统的外部设备（U盘），与mnt目录功能类似</li>
-<li><strong>/mnt</strong>：用户临时挂载文件系统目录，如挂载光驱</li>
-<li>==<strong>/etc</strong>：用来存放所有的配置文件，如变成环境。很重要！==</li>
-<li><strong>/home</strong>：用户主目录！类似于Win中的Administrator用户。一般在home目录下，不同的用户创建不同的文件夹来存储个人文件</li>
-<li><strong>/lib</strong>：存放系统最基本的动态链接共享库，类似于win的dll文件（勿动）</li>
-<li><strong>/lost+found</strong>：存放突然关机的文件</li>
-<li><strong>/media</strong>：挂载系统自动识别的设备如U盘或者光驱</li>
-<li>==<strong>/opt</strong>：安装的软件存放位置==</li>
-<li><strong>/root</strong>：管理员用户目录，即超级权限用户目录</li>
-<li>==<strong>/usr</strong>：很多应用程序和文件存放处，类似于windows中的program files==</li>
-<li><strong>/tmp</strong>：临时文件目录，用完即丢的文件</li>
-<li>==<strong>/var</strong>：经常修改的文件，比如日志文件==</li>
-<li>==<strong>/www</strong>：存放服务器网站相关的资源，环境，网站项目等==</li>
-</ul>
-<p>&nbsp;</p>
-<h2 id="常用的基本命令"><a href="#常用的基本命令" class="headerlink" title="常用的基本命令"></a>常用的基本命令</h2><h3 id="目录管理"><a href="#目录管理" class="headerlink" title="目录管理"></a>目录管理</h3><blockquote>
-<p>ls命令：列出当前目录下所有文件的命令</p>
-</blockquote>
-<p>参数说明：</p>
-<ul>
-<li><code>-a</code>：all，查看全部的文件，包括<strong>隐藏文件</strong></li>
-<li><code>-l</code>：列出所有的文件，包括文件的<strong>属性以及权限</strong>，看不到隐藏文件</li>
-<li><code>-al</code>：所有的参数可以组合使用，<code>-al</code>可以查看所有文件（包括隐藏文件）以及他们的属性和权限</li>
-</ul>
-<p>&nbsp;</p>
-<blockquote>
-<p>cd命令：切换目录</p>
-</blockquote>
-<ul>
-<li>绝对路径：路径的全称。<code>C:\ProgramData\Microsoft Office</code>。==绝对路径：linux中以<code>/</code>开头==</li>
-<li>相对路径：以当前所在路径为基准的路径。比如现在处在ProgramData目录下面，则下级目录相对于当前目录就是<code>/Microsoft Office</code>。==相对路径是对于当前目录该如何去寻找==</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># cd：切换目录命令</span></span><br><span class="line"><span class="comment"># ./：当前目录</span></span><br><span class="line"><span class="comment"># cd ..  ：返回上一级目录</span></span><br></pre></td></tr></table></figure>
-
-<p><img src="https://winkidsimage.oss-cn-beijing.aliyuncs.com/Linux/cd.jpg" alt=""></p>
-<p>（看到视频6:7min）</p>
+            <p>指标</p>
 
         </div>
         
             <ul class="post-copyright">
-            <li><strong>本文标题：</strong><a href="https://winkidslu.top/2020/05/25/Linux-bash/">Linux（二）：Linux Tutorial</a></li>
+            <li><strong>本文标题：</strong><a href="https://winkidslu.top/2020/05/27/ic-metrics/">Imbalanced Classification (六)：Metrics</a></li>
             <li><strong>本文作者：</strong><a href="https://winkidslu.top">Winkids</a></li>
-            <li><strong>本文链接：</strong><a href="https://winkidslu.top/2020/05/25/Linux-bash/">https://winkidslu.top/2020/05/25/Linux-bash/</a></li>
-            <li><strong>发布时间：</strong>2020-05-25</li>
+            <li><strong>本文链接：</strong><a href="https://winkidslu.top/2020/05/27/ic-metrics/">https://winkidslu.top/2020/05/27/ic-metrics/</a></li>
+            <li><strong>发布时间：</strong>2020-05-27</li>
             <li><strong>版权声明：</strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处！
             </li>
             </ul>
@@ -264,7 +191,7 @@
             <div class="level-start">
                 <div class="level-item">
                     <i class="fas fa-tags has-text-grey"></i>&nbsp;
-                    <a class="has-link-grey -link" href="/tags/Linux/" rel="tag">Linux</a>,&nbsp;<a class="has-link-grey -link" href="/tags/%E5%B7%A5%E5%85%B7/" rel="tag">工具</a>
+                    <a class="has-link-grey -link" href="/tags/Imbalanced-Classification/" rel="tag">Imbalanced Classification</a>
                 </div>
             </div>
         </div>
@@ -306,16 +233,16 @@
     <div class="level post-navigation is-flex-wrap is-mobile">
         
         <div class="level-start">
-            <a class="level level-item has-link-grey  article-nav-prev" href="/2020/05/26/imbalanced-classification-review/">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/2020/05/27/ml-ensenble/">
                 <i class="level-item fas fa-chevron-left"></i>
-                <span class="level-item">Imbalanced Classification (一)：Review</span>
+                <span class="level-item">ml-ensenble</span>
             </a>
         </div>
         
         
         <div class="level-end">
-            <a class="level level-item has-link-grey  article-nav-next" href="/2020/05/24/Linux-git/">
-                <span class="level-item">Linux（一）：版本控制工具Git</span>
+            <a class="level level-item has-link-grey  article-nav-next" href="/2020/05/27/ic-costsensitive/">
+                <span class="level-item">Imbalanced Classification (五)：Cost-Sensitive Learning</span>
                 <i class="level-item fas fa-chevron-right"></i>
             </a>
         </div>
@@ -336,7 +263,7 @@
     var gitalk = new Gitalk({
         clientID: '79d74b5c501eee0ad989',
         clientSecret: 'ede24e8670275d4be47708b2351cd04369ac9688',
-        id: 'd2b6c232aa6592f847943dab46610706',
+        id: '9592ea71a79230c20ccd4b4547a58a7c',
         repo: 'blog_comments',
         owner: 'winkids-lu',
         admin: ["winkids-lu"],
@@ -393,7 +320,7 @@
                         文章
                     </p>
                     <p class="title has-text-weight-normal">
-                        6
+                        12
                     </p>
                 </a>
             </div>
@@ -432,37 +359,6 @@
     
         
 
-    <div class="card widget column-left is-sticky" id="toc">
-        <div class="card-content" style="max-height:calc(100vh - 22px);overflow:scroll">
-            <div class="menu">
-                <h3 class="menu-label">
-                    目录
-                </h3>
-                <ul class="menu-list"><li>
-        <a class="is-flex" href="#初识Linux系统">
-        <span class="has-mr-6">1</span>
-        <span>初识Linux系统</span>
-        </a><ul class="menu-list"><li>
-        <a class="is-flex" href="#开机与关机">
-        <span class="has-mr-6">1.1</span>
-        <span>开机与关机</span>
-        </a></li><li>
-        <a class="is-flex" href="#系统的目录结构">
-        <span class="has-mr-6">1.2</span>
-        <span>系统的目录结构</span>
-        </a></li></ul></li><li>
-        <a class="is-flex" href="#常用的基本命令">
-        <span class="has-mr-6">2</span>
-        <span>常用的基本命令</span>
-        </a><ul class="menu-list"><li>
-        <a class="is-flex" href="#目录管理">
-        <span class="has-mr-6">2.1</span>
-        <span>目录管理</span>
-        </a></li></ul></li></ul>
-            </div>
-        </div>
-    </div>
-
 
     
     
@@ -482,7 +378,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo.svg" alt="Linux（二）：Linux Tutorial" height="28">
+                    <img src="/images/logo.svg" alt="Imbalanced Classification (六)：Metrics" height="28">
                 
                 </a>
                 <p class="is-size-7">

@@ -7,24 +7,23 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-<title>Hexo博客使用 (一)：基于Hexo-Github的个人博客框架 - Utopia</title>
+<title>Imbalanced Classification (一)：Review - Utopia</title>
 
 
-    <meta name="description" content="参考：https:&#x2F;&#x2F;www.bilibili.com&#x2F;video&#x2F;BV1Yb411a7ty?from&#x3D;search&amp;seid&#x3D;10467841374186798749  本文为Hexo搭建博客记录一，内容为本地搭建博客，配置远端github信息。">
+    <meta name="description" content="关于不平衡分类的综述笔记">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo博客使用 (一)：基于Hexo-Github的个人博客框架">
-<meta property="og:url" content="https://winkidslu.top/2020/05/22/Hexo01/index.html">
+<meta property="og:title" content="Imbalanced Classification (一)：Review">
+<meta property="og:url" content="https://winkidslu.top/2020/05/26/ic-review/index.html">
 <meta property="og:site_name" content="Utopia">
-<meta property="og:description" content="参考：https:&#x2F;&#x2F;www.bilibili.com&#x2F;video&#x2F;BV1Yb411a7ty?from&#x3D;search&amp;seid&#x3D;10467841374186798749  本文为Hexo搭建博客记录一，内容为本地搭建博客，配置远端github信息。">
+<meta property="og:description" content="关于不平衡分类的综述笔记">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://winkidsimage.oss-cn-beijing.aliyuncs.com/thumbnail/hexologo.jpg">
-<meta property="article:published_time" content="2020-05-22T08:24:28.000Z">
-<meta property="article:modified_time" content="2020-05-26T10:02:20.603Z">
+<meta property="og:image" content="https://winkidsimage.oss-cn-beijing.aliyuncs.com/thumbnail/imbalanced_review.jpg">
+<meta property="article:published_time" content="2020-05-26T09:31:21.000Z">
+<meta property="article:modified_time" content="2020-05-26T15:19:14.469Z">
 <meta property="article:author" content="Winkids">
-<meta property="article:tag" content="Hexo">
-<meta property="article:tag" content="Blog">
+<meta property="article:tag" content="Imbalanced Classification">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://winkidsimage.oss-cn-beijing.aliyuncs.com/thumbnail/hexologo.jpg">
+<meta name="twitter:image" content="https://winkidsimage.oss-cn-beijing.aliyuncs.com/thumbnail/imbalanced_review.jpg">
 
 
 
@@ -82,7 +81,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo.svg" alt="Hexo博客使用 (一)：基于Hexo-Github的个人博客框架" height="28">
+                <img src="/images/logo.svg" alt="Imbalanced Classification (一)：Review" height="28">
             
             </a>
         </div>
@@ -132,27 +131,27 @@
     
     <div class="card-image">
         <span  class="image is-7by1">
-            <img class="thumbnail" src="https://winkidsimage.oss-cn-beijing.aliyuncs.com/thumbnail/hexologo.jpg" alt="Hexo博客使用 (一)：基于Hexo-Github的个人博客框架">
+            <img class="thumbnail" src="https://winkidsimage.oss-cn-beijing.aliyuncs.com/thumbnail/imbalanced_review.jpg" alt="Imbalanced Classification (一)：Review">
         </span>
     </div>
     
     <div class="card-content article ">
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <i class="fas fa-angle-double-right"></i>Hexo博客使用 (一)：基于Hexo-Github的个人博客框架
+                <i class="fas fa-angle-double-right"></i>Imbalanced Classification (一)：Review
             
         </h1>
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2020-05-22T08:24:28.000Z"><i class="far fa-calendar-alt">&nbsp;</i>2020-05-22</time>
+                <time class="level-item has-text-grey" datetime="2020-05-26T09:31:21.000Z"><i class="far fa-calendar-alt">&nbsp;</i>2020-05-26</time>
                 
-                <time class="level-item has-text-grey is-hidden-mobile" datetime="2020-05-26T10:02:20.603Z"><i class="far fa-calendar-check">&nbsp;</i>2020-05-26</time>
+                <time class="level-item has-text-grey is-hidden-mobile" datetime="2020-05-26T15:19:14.469Z"><i class="far fa-calendar-check">&nbsp;</i>2020-05-26</time>
                 
                 
                 <div class="level-item">
                 <i class="far fa-folder-open has-text-grey"></i>&nbsp;
-                <a class="has-link-grey -link" href="/categories/Hexo/">Hexo</a>
+                <a class="has-link-grey -link" href="/categories/Imbalanced-Classfifcation/">Imbalanced Classfifcation</a>
                 </div>
                 
                 
@@ -160,7 +159,7 @@
                     <i class="far fa-clock"></i>&nbsp;
                     
                     
-                    7 分钟 读完 (大约 1060 个字)
+                    9 分钟 读完 (大约 1345 个字)
                 </span>
                 
                 
@@ -173,86 +172,64 @@
         </div>
         
         <div class="content">
-            <blockquote>
-<p>参考：<a href="https://www.bilibili.com/video/BV1Yb411a7ty?from=search&amp;seid=10467841374186798749">https://www.bilibili.com/video/BV1Yb411a7ty?from=search&amp;seid=10467841374186798749</a></p>
-</blockquote>
-<p>本文为Hexo搭建博客记录一，内容为本地搭建博客，配置远端github信息。</p>
+            <p>关于不平衡分类的综述笔记</p>
 <a id="more"></a>
 
+<h2 id="What-is-Imbalanced-Classification"><a href="#What-is-Imbalanced-Classification" class="headerlink" title="What is Imbalanced Classification?"></a>What is Imbalanced Classification?</h2><p>常规的分类任务默认不同的类别数量相差不多，不平衡分类任务指的是在分类任务中某一类的样本数量明显少于其他类。例如这样的数量比：(0:99    1:1)</p>
+<p>常规的分类任务默认所有样本对于损失函数的贡献程度相同，常使用准确率来衡量分类模型的性能：<br>$$<br>Accuracy=\frac{TP+TN}{TP+TN+FP+FN}<br>$$<br>而在不平衡分类中，由于类间数量比例失衡，而常规的分类模型又视所有样本同等程度贡献，故若仍然按照Acc来评价，即使模型将所有样本都分类为多数类（错分所有的少数类），模型仍然能得到一个较高的准确率分数，然而这样的模型由于缺乏对于少数类样本的正确分类能力而没有意义。</p>
+<p>类间不平衡问题在各个领域中普遍存在，如银行欺诈检测，雷达漏油检测，罕见病症判别等，由于异常数据数量少，常规分类模型容易<strong>错分少数类样本或者将少数类样本视为噪声而忽略</strong>，错分少数类样本将会带来严重的后果，例如造成经济损失，产生社会负面现象等。</p>
+<p>所以，与传统机器学习分类任务相比，不平衡分类有着以下的特点：</p>
 <ul>
-<li>主题：Hexo-Next6</li>
-<li>需要npm，git，nodejs（windows平台cmder自动集成所有工具，故使用cmder就可以）</li>
+<li><strong>关注点不同：</strong>传统分类任务单追求“正确分类样本”，不平衡分类任务则更强调“正确分类少数类样本”</li>
+<li><strong>评估指标不同：</strong>如上所述，对于不平衡分类任务，传统的评估指标已经不再使用</li>
 </ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 查看node版本</span></span><br><span class="line">node -v</span><br><span class="line"><span class="comment"># 查看npm版本</span></span><br><span class="line">npm -v</span><br><span class="line"><span class="comment"># 使用国内cnpm加速镜像(可选)</span></span><br><span class="line">npm install -g cnpm --registry=https://registry.npm.taobao.org</span><br><span class="line"><span class="comment"># 查看hexo版本</span></span><br><span class="line">hexo -v</span><br></pre></td></tr></table></figure>
-
-
-
-<p>基本思路：本地生成静态网页，部署到远端仓库（github或者gitee），其中github上传后自动部署，但是访问速度慢；gitee自动部署功能收费。本教程基于github远端仓库配置。</p>
+<p>总结为：不平衡分类是一种强调模型对少数类样本的正确识别能力的特殊分类问题。</p>
 <p>&nbsp;</p>
-<h2 id="在github为本机配置ssh信息"><a href="#在github为本机配置ssh信息" class="headerlink" title="在github为本机配置ssh信息"></a>在github为本机配置ssh信息</h2><p>安装好git后有两个地方需要配置：</p>
+<h2 id="Nomenclature-of-Imbalanced-Classification"><a href="#Nomenclature-of-Imbalanced-Classification" class="headerlink" title="Nomenclature of Imbalanced Classification"></a>Nomenclature of Imbalanced Classification</h2><p>在了解不平衡分类之前，需要先明确不平衡分类的相关概念命名：</p>
 <ul>
-<li>个人信息，包括user.name和user.email</li>
-<li>ssh秘钥信息，使此台电脑与你的远端仓库相连接</li>
+<li><strong>少数类/混淆矩阵正类(Positive)/Majority Class (Label=1)：</strong>样本数量较少的那一类，是不平衡分类中重点关注的类别</li>
+<li><strong>多数类/混淆矩阵负类(Negative)/Minority Class (Label=0)：</strong>样本数量较多的那一类，与少数类相对</li>
+<li><strong>不平衡比率(Imbalalced Ratio)：</strong>衡量数据集不平衡程度的量，计算为多数类数量除以少数类数量:</li>
 </ul>
-<p>配置个人信息：使用cmder或者使用git bash here</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name <span class="string">"Your Name"</span></span><br><span class="line">git config --global user.email <span class="string">"email@example.com"</span></span><br></pre></td></tr></table></figure>
-
-<p>配置秘钥信息</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa  -C <span class="string">"yourEmailAddress"</span>   <span class="comment"># 一路回车</span></span><br><span class="line"><span class="built_in">cd</span> ~/.ssh  <span class="comment"># 或者直接打开C盘/用户/.ssh文件夹，复制id_rsa.pub</span></span><br></pre></td></tr></table></figure>
-
-<p>注意要复制公钥文件，然后打开g自己的github，按照路径自己头像 &gt;&gt; settings &gt;&gt; SSH and GPG keys &gt;&gt;New SSH key，将pub文件上传，即完成秘钥配对</p>
-<p>&nbsp;</p>
-<h2 id="全局安装hexo"><a href="#全局安装hexo" class="headerlink" title="全局安装hexo"></a>全局安装hexo</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli  <span class="comment"># 或者cnpm install -g hexo-cli</span></span><br></pre></td></tr></table></figure>
-
-<p>&nbsp;</p>
-<h2 id="创建需要保存博客的文件夹，然后进入文件夹-以文件夹名blog为例"><a href="#创建需要保存博客的文件夹，然后进入文件夹-以文件夹名blog为例" class="headerlink" title="创建需要保存博客的文件夹，然后进入文件夹(以文件夹名blog为例)"></a>创建需要保存博客的文件夹，然后进入文件夹(以文件夹名blog为例)</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 切换工作目录</span></span><br><span class="line"><span class="built_in">cd</span> blog</span><br><span class="line"><span class="comment"># 初始化hexo</span></span><br><span class="line">hexo init</span><br></pre></td></tr></table></figure>
-
-<p>经过初始化后的文件夹结构如下图所示</p>
-<p><img src="https://winkidsimage.oss-cn-beijing.aliyuncs.com/Hexo/hexo_init.jpg" alt="Hexo init 文件结构"></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">-- <span class="built_in">source</span></span><br><span class="line">	| -- _post : 存放博客文件</span><br><span class="line">- - themes : 存放主题文件</span><br><span class="line">-- _config.yml: 站点配置文件</span><br><span class="line">-- package.json: 已安装插件列表</span><br></pre></td></tr></table></figure>
-
-<p>&nbsp;</p>
-<h2 id="创建博客并生成本地预览"><a href="#创建博客并生成本地预览" class="headerlink" title="创建博客并生成本地预览"></a>创建博客并生成本地预览</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 创建博客md文件，文件生成在./source/_post</span></span><br><span class="line">hexo n <span class="string">"我的第一篇博客"</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 生成</span></span><br><span class="line">hexo g</span><br><span class="line"></span><br><span class="line"><span class="comment"># 本地预览</span></span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
-
-<p>登陆localhost端口正常显示，至此本地环境配置完成，下一步需要配置github远端</p>
-<p>&nbsp;</p>
-<h2 id="配置远端github部署仓库"><a href="#配置远端github部署仓库" class="headerlink" title="配置远端github部署仓库"></a>配置远端github部署仓库</h2><p>注意仓库名必须和用户名相同：<strong>用户名.github.io</strong>，填写相关信息后创建仓库</p>
-<p><img src="https://winkidsimage.oss-cn-beijing.aliyuncs.com/Hexo/github_blog.jpg" alt="git page"></p>
-<p>&nbsp;</p>
-<h2 id="在博客目录下安装hexo-git推送工具"><a href="#在博客目录下安装hexo-git推送工具" class="headerlink" title="在博客目录下安装hexo git推送工具"></a>在博客目录下安装hexo git推送工具</h2><p>warning信息可以忽略</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> blog</span><br><span class="line">npm install --save hexo-deployer-git   <span class="comment"># 或者cnpm安装</span></span><br></pre></td></tr></table></figure>
-
-<p>&nbsp;&nbsp;</p>
-<h2 id="设置站点配置文件"><a href="#设置站点配置文件" class="headerlink" title="设置站点配置文件"></a>设置站点配置文件</h2><p>打开blog文件夹下的_config.yml文件，设置最后几行远端推送的信息</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 注意冒号后面的空格不可以省略</span></span><br><span class="line">deploy:</span><br><span class="line"> 	<span class="built_in">type</span>: git</span><br><span class="line"> 	repo: https://github.com/Winkids-Lu/winkids-lu.github.io.git</span><br><span class="line"> 	branch: master</span><br></pre></td></tr></table></figure>
-
-<p>&nbsp;</p>
-<h2 id="提交"><a href="#提交" class="headerlink" title="提交"></a>提交</h2><p>生成后输入命令提交</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
-
-<p>出现下面的情况，需要输入你的github用户名和密码，之后成功提交</p>
-<p><img src="https://winkidsimage.oss-cn-beijing.aliyuncs.com/Hexo/hexo_d.jpg" alt="Hexo提交"></p>
-<p>注意，如果报错<strong>please tell me who you are</strong>，证明是为配置git信息，需要告诉git个人信息</p>
-<p>&nbsp;</p>
-<h2 id="打开浏览器输入yourname-github-io，正常访问，配置结束"><a href="#打开浏览器输入yourname-github-io，正常访问，配置结束" class="headerlink" title="打开浏览器输入yourname.github.io，正常访问，配置结束"></a>打开浏览器输入yourname.github.io，正常访问，配置结束</h2><p><strong>P.S.</strong></p>
+<p>$$<br>IR=\frac{N_{majority}}{N_{minority}},\quad N=number<br>$$</p>
 <ul>
-<li>每次提交之前建议按照hexo clean ==&gt; hexo g ==&gt; hexo d的顺序</li>
-<li>避免每次提交都要输入用户名和密码的相关操作，请自行百度</li>
+<li><strong>异常率：</strong>这个概念与实际业务场景相关，比如违约率，罕见病率，为少数类样本数量除以全集样本数量</li>
 </ul>
 <p>&nbsp;</p>
-<h2 id="绑定自定义的域名"><a href="#绑定自定义的域名" class="headerlink" title="绑定自定义的域名"></a>绑定自定义的域名</h2><p>以我的.top后缀域名为例，首先注册域名并通过实名认证，然后进行域名解析。通过阿里云新手引导会<strong>自动添加@和www两条记录</strong>，由于github page是虚拟服务器，需要将这两条引导类型更改为<strong>CNAME</strong></p>
-<p><img src="https://winkidsimage.oss-cn-beijing.aliyuncs.com/Hexo/dns.jpg" alt="DNS解析"></p>
-<p>然后回到Gitpage，路径为<strong>博客仓库页面——Settings下拉</strong></p>
-<p><img src="https://winkidsimage.oss-cn-beijing.aliyuncs.com/Hexo/gitpage.jpg" alt="Git page修改"></p>
-<p><strong>注意：个人域名只有经过了实名认证才能够正常使用</strong></p>
+<h2 id="Methods-of-Imbalanced-Classification"><a href="#Methods-of-Imbalanced-Classification" class="headerlink" title="Methods of Imbalanced Classification"></a>Methods of Imbalanced Classification</h2><p>面对不平衡分类问题，现有研究集中在数据层面和算法层面，简单概括为：</p>
+<h3 id="Data-Level：Resampling"><a href="#Data-Level：Resampling" class="headerlink" title="Data Level：Resampling"></a>Data Level：Resampling</h3><p>在数据层面上，重采样方法希望达到平衡不同类别样本的数量以消除数量差，从而间接增加了少数类样本的比重。实施方法有过采样类方法和欠采样类方法，这里仅简述原理，具体的后面文章中展开</p>
+<ul>
+<li>过采样类方法：增加少数类样本的数量以达到类间样本的数量平衡</li>
+<li>欠采样类方法：减少多数类样本的数量以达到类间样本的数量平衡</li>
+</ul>
+<h3 id="Algorithm-Level：Ensemble-Learning"><a href="#Algorithm-Level：Ensemble-Learning" class="headerlink" title="Algorithm Level：Ensemble Learning"></a>Algorithm Level：Ensemble Learning</h3><p>如果单个分类器对于不平衡数据敏感，那么算法层面的集成学习的思想就是构造多个若分类器组成强分类器，与传统的集成学习不同，不平衡分类集成学习一般在集成中同时应用Resampling的思想</p>
+<h3 id="Algorithm-Level：Cost-Sensitive-Learning"><a href="#Algorithm-Level：Cost-Sensitive-Learning" class="headerlink" title="Algorithm Level：Cost-Sensitive Learning"></a>Algorithm Level：Cost-Sensitive Learning</h3><p>算法层面另一个研究方向是代价敏感学习，顾名思义，关注混淆矩阵中的FP和FN，在错分时设置惩罚代价，并将这些代价加入到损失函数中，模型为了最小化损失值，开始关注减少这些样本的错分类，从而增强了模型对于少数类样本的学习能力</p>
+<h3 id="Post-hock-Adjusting"><a href="#Post-hock-Adjusting" class="headerlink" title="Post-hock Adjusting"></a>Post-hock Adjusting</h3><p>由于不平衡分类问题的特殊性，选择的评估指标使用默认的阈值可能没法达到较为理想的效果（如Logistic Regression将0.5设定为阈值，大于0.5输出结果1，小于则输出结果为0），该类研究的思想是希望调整最后的分类阈值，使模型能够适应类间样本数量不平衡的特点。</p>
+<p>&nbsp;</p>
+<h2 id="Metrics-of-Imbalanced-Learning"><a href="#Metrics-of-Imbalanced-Learning" class="headerlink" title="Metrics of Imbalanced Learning"></a>Metrics of Imbalanced Learning</h2><ul>
+<li>Confusion Matrix：分类问题常用的混淆矩阵，不平衡分类重点关注在不大范围降低Precision的同时增加Recall，即提升模型对于少数类样本的正确分类能力</li>
+</ul>
+<p><img src="https://winkidsimage.oss-cn-beijing.aliyuncs.com/Imbalanced_Classification/confusionMatrix.jpg" alt=""></p>
+<ul>
+<li>AUCROC：ROC受试者工作曲线下面积</li>
+<li>AUCPR：PR曲线下面积</li>
+<li>G-means</li>
+<li>F1-Score</li>
+</ul>
+<p>&nbsp;</p>
+<h2 id="Tools-of-Imbalanced-Learning"><a href="#Tools-of-Imbalanced-Learning" class="headerlink" title="Tools of Imbalanced Learning"></a>Tools of Imbalanced Learning</h2><ul>
+<li>Machine Learning API：Scikit-Learning，Pandas，Numpy</li>
+<li>Imbalanced Learning API：imblearn</li>
+<li>Cost-Sensitive Learning：Costcla Package，Weka</li>
+</ul>
 
         </div>
         
             <ul class="post-copyright">
-            <li><strong>本文标题：</strong><a href="https://winkidslu.top/2020/05/22/Hexo01/">Hexo博客使用 (一)：基于Hexo-Github的个人博客框架</a></li>
+            <li><strong>本文标题：</strong><a href="https://winkidslu.top/2020/05/26/ic-review/">Imbalanced Classification (一)：Review</a></li>
             <li><strong>本文作者：</strong><a href="https://winkidslu.top">Winkids</a></li>
-            <li><strong>本文链接：</strong><a href="https://winkidslu.top/2020/05/22/Hexo01/">https://winkidslu.top/2020/05/22/Hexo01/</a></li>
-            <li><strong>发布时间：</strong>2020-05-22</li>
+            <li><strong>本文链接：</strong><a href="https://winkidslu.top/2020/05/26/ic-review/">https://winkidslu.top/2020/05/26/ic-review/</a></li>
+            <li><strong>发布时间：</strong>2020-05-26</li>
             <li><strong>版权声明：</strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处！
             </li>
             </ul>
@@ -263,7 +240,7 @@
             <div class="level-start">
                 <div class="level-item">
                     <i class="fas fa-tags has-text-grey"></i>&nbsp;
-                    <a class="has-link-grey -link" href="/tags/Blog/" rel="tag">Blog</a>,&nbsp;<a class="has-link-grey -link" href="/tags/Hexo/" rel="tag">Hexo</a>
+                    <a class="has-link-grey -link" href="/tags/Imbalanced-Classification/" rel="tag">Imbalanced Classification</a>
                 </div>
             </div>
         </div>
@@ -305,12 +282,19 @@
     <div class="level post-navigation is-flex-wrap is-mobile">
         
         <div class="level-start">
-            <a class="level level-item has-link-grey  article-nav-prev" href="/2020/05/22/Hexo02/">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/2020/05/27/ic-oversamplings/">
                 <i class="level-item fas fa-chevron-left"></i>
-                <span class="level-item">Hexo博客使用 (二)：Hexo基本使用与图床</span>
+                <span class="level-item">Imbalanced Classification (二)：Over-sampling Methods</span>
             </a>
         </div>
         
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2020/05/25/Linux-tutorial/">
+                <span class="level-item">Linux（二）：Linux Tutorial</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
         
     </div>
 </div>
@@ -328,7 +312,7 @@
     var gitalk = new Gitalk({
         clientID: '79d74b5c501eee0ad989',
         clientSecret: 'ede24e8670275d4be47708b2351cd04369ac9688',
-        id: '0fd7d70fbb169a76163732a90692d016',
+        id: '59ac093be9db3b9d111a075b488aec92',
         repo: 'blog_comments',
         owner: 'winkids-lu',
         admin: ["winkids-lu"],
@@ -431,45 +415,41 @@
                     目录
                 </h3>
                 <ul class="menu-list"><li>
-        <a class="is-flex" href="#在github为本机配置ssh信息">
+        <a class="is-flex" href="#What-is-Imbalanced-Classification">
         <span class="has-mr-6">1</span>
-        <span>在github为本机配置ssh信息</span>
+        <span>What is Imbalanced Classification?</span>
         </a></li><li>
-        <a class="is-flex" href="#全局安装hexo">
+        <a class="is-flex" href="#Nomenclature-of-Imbalanced-Classification">
         <span class="has-mr-6">2</span>
-        <span>全局安装hexo</span>
+        <span>Nomenclature of Imbalanced Classification</span>
         </a></li><li>
-        <a class="is-flex" href="#创建需要保存博客的文件夹，然后进入文件夹-以文件夹名blog为例">
+        <a class="is-flex" href="#Methods-of-Imbalanced-Classification">
         <span class="has-mr-6">3</span>
-        <span>创建需要保存博客的文件夹，然后进入文件夹(以文件夹名blog为例)</span>
+        <span>Methods of Imbalanced Classification</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#Data-Level：Resampling">
+        <span class="has-mr-6">3.1</span>
+        <span>Data Level：Resampling</span>
         </a></li><li>
-        <a class="is-flex" href="#创建博客并生成本地预览">
+        <a class="is-flex" href="#Algorithm-Level：Ensemble-Learning">
+        <span class="has-mr-6">3.2</span>
+        <span>Algorithm Level：Ensemble Learning</span>
+        </a></li><li>
+        <a class="is-flex" href="#Algorithm-Level：Cost-Sensitive-Learning">
+        <span class="has-mr-6">3.3</span>
+        <span>Algorithm Level：Cost-Sensitive Learning</span>
+        </a></li><li>
+        <a class="is-flex" href="#Post-hock-Adjusting">
+        <span class="has-mr-6">3.4</span>
+        <span>Post-hock Adjusting</span>
+        </a></li></ul></li><li>
+        <a class="is-flex" href="#Metrics-of-Imbalanced-Learning">
         <span class="has-mr-6">4</span>
-        <span>创建博客并生成本地预览</span>
+        <span>Metrics of Imbalanced Learning</span>
         </a></li><li>
-        <a class="is-flex" href="#配置远端github部署仓库">
+        <a class="is-flex" href="#Tools-of-Imbalanced-Learning">
         <span class="has-mr-6">5</span>
-        <span>配置远端github部署仓库</span>
-        </a></li><li>
-        <a class="is-flex" href="#在博客目录下安装hexo-git推送工具">
-        <span class="has-mr-6">6</span>
-        <span>在博客目录下安装hexo git推送工具</span>
-        </a></li><li>
-        <a class="is-flex" href="#设置站点配置文件">
-        <span class="has-mr-6">7</span>
-        <span>设置站点配置文件</span>
-        </a></li><li>
-        <a class="is-flex" href="#提交">
-        <span class="has-mr-6">8</span>
-        <span>提交</span>
-        </a></li><li>
-        <a class="is-flex" href="#打开浏览器输入yourname-github-io，正常访问，配置结束">
-        <span class="has-mr-6">9</span>
-        <span>打开浏览器输入yourname.github.io，正常访问，配置结束</span>
-        </a></li><li>
-        <a class="is-flex" href="#绑定自定义的域名">
-        <span class="has-mr-6">10</span>
-        <span>绑定自定义的域名</span>
+        <span>Tools of Imbalanced Learning</span>
         </a></li></ul>
             </div>
         </div>
@@ -494,7 +474,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo.svg" alt="Hexo博客使用 (一)：基于Hexo-Github的个人博客框架" height="28">
+                    <img src="/images/logo.svg" alt="Imbalanced Classification (一)：Review" height="28">
                 
                 </a>
                 <p class="is-size-7">
