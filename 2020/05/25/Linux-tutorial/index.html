@@ -19,7 +19,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://winkidsimage.oss-cn-beijing.aliyuncs.com/thumbnail/linux.jpg">
 <meta property="article:published_time" content="2020-05-25T12:00:52.000Z">
-<meta property="article:modified_time" content="2020-05-27T01:50:45.021Z">
+<meta property="article:modified_time" content="2020-05-28T08:07:30.955Z">
 <meta property="article:author" content="Winkids">
 <meta property="article:tag" content="Linux">
 <meta property="article:tag" content="工具">
@@ -147,7 +147,7 @@
             <div class="level-left">
                 <time class="level-item has-text-grey" datetime="2020-05-25T12:00:52.000Z"><i class="far fa-calendar-alt">&nbsp;</i>2020-05-25</time>
                 
-                <time class="level-item has-text-grey is-hidden-mobile" datetime="2020-05-27T01:50:45.021Z"><i class="far fa-calendar-check">&nbsp;</i>2020-05-27</time>
+                <time class="level-item has-text-grey is-hidden-mobile" datetime="2020-05-28T08:07:30.955Z"><i class="far fa-calendar-check">&nbsp;</i>2020-05-28</time>
                 
                 
                 <div class="level-item">
@@ -160,7 +160,7 @@
                     <i class="far fa-clock"></i>&nbsp;
                     
                     
-                    7 分钟 读完 (大约 1010 个字)
+                    18 分钟 读完 (大约 2757 个字)
                 </span>
                 
                 
@@ -254,6 +254,170 @@
 <p>&nbsp;</p>
 <blockquote>
 <p>mkdir：创建一个目录</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 创建一个单级目录</span></span><br><span class="line">mkdir <span class="built_in">test</span></span><br><span class="line"><span class="comment"># 创建一个层级的目录：test2/test3/test4（递归创建目录）</span></span><br><span class="line">mkdir -p test2/test3/test4</span><br></pre></td></tr></table></figure>
+
+<p>&nbsp;</p>
+<blockquote>
+<p>rmdir 删除目录</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#  删除一个单级的，为空的目录。如果下面存在文件要先删除文件</span></span><br><span class="line">rmdir <span class="built_in">test</span> </span><br><span class="line"><span class="comment"># 删除层级目录</span></span><br><span class="line">mkdir -p test2/test3/test4</span><br></pre></td></tr></table></figure>
+
+<p>&nbsp;</p>
+<blockquote>
+<p>cp：复制文件或者目录</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># cp 文件名 需要拷贝到的文件路径。如果文件重复会选择覆盖或者放弃</span></span><br><span class="line">cp name.txt name</span><br></pre></td></tr></table></figure>
+
+<p>&nbsp;</p>
+<blockquote>
+<p>rm：移除文件或者目录。危险命令</p>
+</blockquote>
+<ul>
+<li><code>-f</code>：忽略不存在的文件，不会出现警告，即强制删除</li>
+<li><code>-r</code>：递归删除目录</li>
+<li><code>-i</code>：互动，删除的时候询问是否删除</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rm -rf /	<span class="comment"># 删库跑路</span></span><br></pre></td></tr></table></figure>
+
+<p>&nbsp;</p>
+<blockquote>
+<p>mv：移动文件或者目录；两个文件执行重命名操作，一个文件执行移动操作</p>
+</blockquote>
+<ul>
+<li><code>-f</code>：强制</li>
+<li><code>-u</code>：只替换已经更新过的文件</li>
+</ul>
+<p>&nbsp;</p>
+<h3 id="基本属性"><a href="#基本属性" class="headerlink" title="基本属性"></a>基本属性</h3><p><strong>一个类型字母+3x3=9个读写权限的字母，三组代表三种用户</strong></p>
+<p>首先了解文件的属性：<code>ls -l</code></p>
+<p><img src="https://winkidsimage.oss-cn-beijing.aliyuncs.com/Linux/file_feature.jpg" alt=""></p>
+<p><strong>观察首字母：常用的三种</strong></p>
+<ul>
+<li>[d]：代表目录</li>
+<li>[-]：代表的是文件，-后面一般接的是文件的读写权限</li>
+<li>[l]：代表链接文档</li>
+</ul>
+<p><strong>后面的九个固定字母：三个一组</strong></p>
+<ul>
+<li>[r]代表可读，[w]代表可写，[x]代表可执行</li>
+</ul>
+<p><img src="https://winkidsimage.oss-cn-beijing.aliyuncs.com/Linux/rwx.jpg" alt=""></p>
+<ul>
+<li><p>三组从前到后分别为root用户所属权限、属组用户权限以及一般用户权限，中间的<code>-</code>代表没有该项操作的权限</p>
+</li>
+<li><p>后面两个root，分别代表<strong>属主</strong>和<strong>属组（用户组）</strong></p>
+</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># chgrp更改文件属组（不常用）</span></span><br><span class="line"><span class="comment"># chown更改文件属主（不常用）</span></span><br></pre></td></tr></table></figure>
+
+<p>&nbsp;</p>
+<blockquote>
+<p>==chomd==：更改文件的9个属性（常用）</p>
+</blockquote>
+<p>文件属性设置有数字和符号两种，常用数字。比如用户有owner/group/others三种身份，每一种身份都有read/write/execute三种文件执行权限，每个权限对应的数字为</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">r: 4		w: 2		x: 1</span><br><span class="line"><span class="comment"># 可读可写不可执行	rw-	6</span></span><br><span class="line"><span class="comment"># 可读可写可执行	rwx 7</span></span><br><span class="line">chmod 777	<span class="comment"># 赋予文件最高读写权限</span></span><br></pre></td></tr></table></figure>
+
+<p>每种身份的举例：</p>
+<ul>
+<li>owner = rwx = 7</li>
+<li>group = rwx = 7</li>
+<li>others = — = 0</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">E:\blog</span><br><span class="line">λ ls -l</span><br><span class="line">total 736</span><br><span class="line">-rw-r--r-- 1 Winkids 197609   3048  5月 25 23:34 _config.yml</span><br><span class="line">-rw-r--r-- 1 Winkids 197609 276782  5月 27 10:45 db.json</span><br><span class="line">-rw-r--r-- 1 Winkids 197609      0  5月 28 08:40 name.txt</span><br><span class="line">drwxr-xr-x 1 Winkids 197609      0  5月 25 21:08 node_modules/</span><br><span class="line">-rw-r--r-- 1 Winkids 197609    943  5月 25 21:08 package.json</span><br><span class="line">-rw-r--r-- 1 Winkids 197609 286985  5月 25 21:08 package-lock.json</span><br><span class="line">drwxr-xr-x 1 Winkids 197609      0  5月 27 10:36 public/</span><br><span class="line">drwxr-xr-x 1 Winkids 197609      0  5月 19 23:10 scaffolds/</span><br><span class="line">drwxr-xr-x 1 Winkids 197609      0  5月 25 00:09 <span class="built_in">source</span>/</span><br><span class="line">drwxr-xr-x 1 Winkids 197609      0  5月 25 22:07 themes/</span><br><span class="line"></span><br><span class="line">E:\blog</span><br><span class="line">λ chmod 777 name.txt	<span class="comment"># 仅命令格式举例</span></span><br></pre></td></tr></table></figure>
+
+<p>&nbsp;</p>
+<h3 id="文件内容查看"><a href="#文件内容查看" class="headerlink" title="文件内容查看"></a>文件内容查看</h3><ul>
+<li>==<code>cat</code>==：从第一行开始查看文件，<strong>读文章或者读取配置文件</strong></li>
+<li><code>tac</code>：从最后一行开始查看文件</li>
+<li><code>nl</code>：显示的时候顺便输出行号，<strong>看代码**</strong></li>
+<li><code>more</code>：一页一页的显示文件内容，<strong>空格代表翻页，回车代表向下翻行，观看的时候输入:f代表查看当前的行号</strong></li>
+<li><code>less</code>：与more类似，<ul>
+<li><strong>可以往前翻页（空格键翻页，上下方向键可以翻页）</strong></li>
+<li><strong>使用<code>/char</code>指定字符串搜索向下查询</strong></li>
+<li><strong>使用<code>?char</code>指定字符串搜索向上查询</strong></li>
+<li>要查询字符串，n代表向下查询，N代表向上查询</li>
+<li><strong>使用q键离开文件</strong></li>
+</ul>
+</li>
+<li><code>head</code>：查看头几行</li>
+<li><code>tail</code>：查看尾几行</li>
+</ul>
+<p>例子：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">E:\blog</span><br><span class="line">λ cat package.json</span><br><span class="line">&#123;</span><br><span class="line">  <span class="string">"name"</span>: <span class="string">"hexo-site"</span>,</span><br><span class="line">  <span class="string">"version"</span>: <span class="string">"0.0.0"</span>,</span><br><span class="line">  <span class="string">"private"</span>: <span class="literal">true</span>,</span><br><span class="line">  <span class="string">"scripts"</span>: &#123;</span><br><span class="line">    <span class="string">"build"</span>: <span class="string">"hexo generate"</span>,</span><br><span class="line">    <span class="string">"clean"</span>: <span class="string">"hexo clean"</span>,</span><br><span class="line">    <span class="string">"deploy"</span>: <span class="string">"hexo deploy"</span>,</span><br><span class="line">    <span class="string">"server"</span>: <span class="string">"hexo server"</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="string">"hexo"</span>: &#123;</span><br><span class="line">    <span class="string">"version"</span>: <span class="string">"4.2.1"</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="string">"dependencies"</span>: &#123;</span><br><span class="line">    <span class="string">"bulma-stylus"</span>: <span class="string">"^0.8.0"</span>,</span><br><span class="line">    <span class="string">"cheerio"</span>: <span class="string">"^1.0.0-rc.3"</span>,</span><br><span class="line">    <span class="string">"hexo"</span>: <span class="string">"^4.2.1"</span>,</span><br><span class="line">    <span class="string">"hexo-component-inferno"</span>: <span class="string">"^0.2.4"</span>,</span><br><span class="line">    <span class="string">"hexo-deployer-git"</span>: <span class="string">"^2.1.0"</span>,</span><br><span class="line">    <span class="string">"hexo-generator-archive"</span>: <span class="string">"^1.0.0"</span>,</span><br><span class="line">    <span class="string">"hexo-generator-category"</span>: <span class="string">"^1.0.0"</span>,</span><br><span class="line">    <span class="string">"hexo-generator-index"</span>: <span class="string">"^1.0.0"</span>,</span><br><span class="line">    <span class="string">"hexo-generator-tag"</span>: <span class="string">"^1.0.0"</span>,</span><br><span class="line">    <span class="string">"hexo-helper-live2d"</span>: <span class="string">"^3.1.1"</span>,</span><br><span class="line">    <span class="string">"hexo-renderer-ejs"</span>: <span class="string">"^1.0.0"</span>,</span><br><span class="line">    <span class="string">"hexo-renderer-inferno"</span>: <span class="string">"^0.1.3"</span>,</span><br><span class="line">    <span class="string">"hexo-renderer-marked"</span>: <span class="string">"^2.0.0"</span>,</span><br><span class="line">    <span class="string">"hexo-renderer-stylus"</span>: <span class="string">"^1.1.0"</span>,</span><br><span class="line">    <span class="string">"hexo-server"</span>: <span class="string">"^1.0.0"</span>,</span><br><span class="line">    <span class="string">"inferno"</span>: <span class="string">"^7.3.3"</span>,</span><br><span class="line">    <span class="string">"inferno-create-element"</span>: <span class="string">"^7.3.3"</span>,</span><br><span class="line">    <span class="string">"live2d-widget-model-haru"</span>: <span class="string">"^1.0.5"</span>,</span><br><span class="line">    <span class="string">"live2d-widget-model-tororo"</span>: <span class="string">"^1.0.5"</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 查看指定行数（例如通过-n指定查看前二十行）</span></span><br><span class="line">head -n 20 package.json </span><br><span class="line"><span class="comment"># tail同理</span></span><br><span class="line">tail -n 20 package.json</span><br></pre></td></tr></table></figure>
+
+<p><strong>补充</strong></p>
+<ul>
+<li>网络配置目录<code>cd/etc/sysconfig/network-scripts</code>，默认网络配置文件为<code>ifcfg-eth0</code>(CentOS7)</li>
+<li>查询网络配置<code>ifconfig</code>，win中是<code>ipconfig</code></li>
+<li>ping的使用方法Linux和Win相同</li>
+</ul>
+<p>&nbsp;</p>
+<h3 id="硬链接与软链接-了解"><a href="#硬链接与软链接-了解" class="headerlink" title="硬链接与软链接(了解)"></a>硬链接与软链接(了解)</h3><p>Linux硬链接：</p>
+<ul>
+<li>硬链接：A–B，假设B是A的硬链接，他们两个指向同一个文件，<strong>允许一个文件拥有多个路径</strong>，用户可以通过这种机制建立硬链接到重要文件上防止误删</li>
+<li>软链接：类似win中的快捷方式，<strong>删除了源文件快捷方式也访问不了</strong></li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 创建链接 (f2链接到了f1)</span></span><br><span class="line">ln f1 f2</span><br><span class="line"><span class="comment"># 创建软链接 (f3链接到了f1)</span></span><br><span class="line">ln -s f1 f3</span><br></pre></td></tr></table></figure>
+
+<p>例子：</p>
+<blockquote>
+<p>touch：创建文件</p>
+<p>echo：将字符串输入文件，或者从文件中输出字符串</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">E:\blog</span><br><span class="line">λ touch f1</span><br><span class="line">λ ln f1 f2				<span class="comment"># 创建硬链接</span></span><br><span class="line">λ ls</span><br><span class="line">_config.yml  db.json  f1  f2  node_modules/  package.json  package-lock.json  public/  scaffolds/  <span class="built_in">source</span>/  themes/</span><br><span class="line"></span><br><span class="line">λ <span class="built_in">echo</span> <span class="string">"i am a boy"</span> &gt;&gt; f1	<span class="comment"># f1写入字符串</span></span><br><span class="line">λ cat f1</span><br><span class="line"><span class="string">"i am a boy"</span></span><br><span class="line"></span><br><span class="line">λ cat f2</span><br><span class="line"><span class="string">"i am a boy"</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建软链接</span></span><br><span class="line">λ ln -s f1 f3				<span class="comment"># 创建符号链接（软链接）</span></span><br><span class="line"></span><br><span class="line">E:\blog</span><br><span class="line">λ cat f3</span><br><span class="line"><span class="string">"i am a boy"</span></span><br></pre></td></tr></table></figure>
+
+<p>上述情况，当删除了f1，软链接f3无法访问，而硬链接f2仍然能够访问</p>
+<p>&nbsp;</p>
+<h3 id="Vim编辑器"><a href="#Vim编辑器" class="headerlink" title="Vim编辑器"></a>Vim编辑器</h3><p>重点掌握Vim的<strong>查看、编辑、保存</strong>功能</p>
+<p>三种使用模式：命令模式(Command mode)、输入模式(Insert mode)、底线命令模式(Last line mode)</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 如果文件存在就是修改文件，如果不存在就是新建文件</span></span><br><span class="line">vim hellow.txt</span><br></pre></td></tr></table></figure>
+
+<p>&nbsp;</p>
+<h4 id="命令模式"><a href="#命令模式" class="headerlink" title="命令模式"></a>命令模式</h4><p>刚进入vim就进入了命令模式，不能输入</p>
+<ul>
+<li><code>i</code>：切换到输入模式，可以输入字符</li>
+<li><code>x</code>：删除当前光标所在的字符</li>
+<li><code>:</code>：切换到底线命令模式，在最低一行输入命令。<strong>如果是编辑模式需要先ESC退出编辑模式</strong></li>
+</ul>
+<p>&nbsp;</p>
+<h4 id="编辑模式"><a href="#编辑模式" class="headerlink" title="编辑模式"></a>编辑模式</h4><p><img src="https://winkidsimage.oss-cn-beijing.aliyuncs.com/Linux/insert.jpg" alt=""></p>
+<p>&nbsp;</p>
+<h4 id="底线命令模式"><a href="#底线命令模式" class="headerlink" title="底线命令模式"></a>底线命令模式</h4><p>在命令模式下按<code>：</code>进入底线命令模式。光标移动到最下。</p>
+<ul>
+<li>‘q’：退出程序</li>
+<li>‘w’：保存文件</li>
+<li>wq经常连着用。<code>:wq</code></li>
+</ul>
+<p>&nbsp;</p>
+<h3 id="账号管理"><a href="#账号管理" class="headerlink" title="账号管理"></a>账号管理</h3><h4 id="用户账号管理"><a href="#用户账号管理" class="headerlink" title="用户账号管理"></a>用户账号管理</h4><p>涉及用户账号的添加，修改和删除。</p>
+<p>属主与属组的概念也不同。</p>
+<p>&nbsp;</p>
+<blockquote>
+<p>useradd 添加用户</p>
+</blockquote>
+<ul>
+<li><code>-m</code>：自动创建这个用户的主目录。<code>/home/newuser</code></li>
+</ul>
+<p>Linux一切皆文件，创建用户就是在相关的目录下写入文件。<code>usr/passwd</code></p>
+<p>&nbsp;</p>
+<blockquote>
+<p>userdel 删除用户</p>
+</blockquote>
+<ul>
+<li><code>-r</code>：删除用户并且清掉文件</li>
+<li>&nbsp;</li>
+</ul>
+<blockquote>
+<p>usermod 修改用户</p>
+</blockquote>
+<p>修改用户对应修改内容，参数设置如下：</p>
+<p><img src="https://winkidsimage.oss-cn-beijing.aliyuncs.com/Linux/usr.jpg" alt=""></p>
+<p>&nbsp;</p>
+<blockquote>
+<p>su 切换用户</p>
 </blockquote>
 
         </div>
@@ -402,7 +566,7 @@
                         文章
                     </p>
                     <p class="title has-text-weight-normal">
-                        12
+                        13
                     </p>
                 </a>
             </div>
@@ -412,7 +576,7 @@
                         分类
                     </p>
                     <p class="title has-text-weight-normal">
-                        4
+                        5
                     </p>
                 </a>
             </div>
@@ -422,7 +586,7 @@
                         标签
                     </p>
                     <p class="title has-text-weight-normal">
-                        6
+                        7
                     </p>
                 </a>
             </div>
@@ -467,7 +631,43 @@
         <a class="is-flex" href="#目录管理">
         <span class="has-mr-6">2.1</span>
         <span>目录管理</span>
-        </a></li></ul></li></ul>
+        </a></li><li>
+        <a class="is-flex" href="#基本属性">
+        <span class="has-mr-6">2.2</span>
+        <span>基本属性</span>
+        </a></li><li>
+        <a class="is-flex" href="#文件内容查看">
+        <span class="has-mr-6">2.3</span>
+        <span>文件内容查看</span>
+        </a></li><li>
+        <a class="is-flex" href="#硬链接与软链接-了解">
+        <span class="has-mr-6">2.4</span>
+        <span>硬链接与软链接(了解)</span>
+        </a></li><li>
+        <a class="is-flex" href="#Vim编辑器">
+        <span class="has-mr-6">2.5</span>
+        <span>Vim编辑器</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#命令模式">
+        <span class="has-mr-6">2.5.1</span>
+        <span>命令模式</span>
+        </a></li><li>
+        <a class="is-flex" href="#编辑模式">
+        <span class="has-mr-6">2.5.2</span>
+        <span>编辑模式</span>
+        </a></li><li>
+        <a class="is-flex" href="#底线命令模式">
+        <span class="has-mr-6">2.5.3</span>
+        <span>底线命令模式</span>
+        </a></li></ul></li><li>
+        <a class="is-flex" href="#账号管理">
+        <span class="has-mr-6">2.6</span>
+        <span>账号管理</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#用户账号管理">
+        <span class="has-mr-6">2.6.1</span>
+        <span>用户账号管理</span>
+        </a></li></ul></li></ul></li></ul>
             </div>
         </div>
     </div>
